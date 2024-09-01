@@ -1,15 +1,16 @@
 const config = {
-  projectName: 'taro-cloud-template',
+  projectName: 'taro-nutui-wxcloud-template',
   date: '2024-9-1',
-  designWidth: 750,
+  designWidth: 375,
   deviceRatio: {
-    '640': 2.34 / 2,
-    '750': 1,
-    '828': 1.81 / 2
+    640: 2.34 / 2,
+    750: 1,
+    828: 1.81 / 2,
+    375: 2 / 1
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [],
+  plugins: ['@tarojs/plugin-html'],
   defineConstants: {
   },
   copy: {
@@ -19,16 +20,19 @@ const config = {
     }
   },
   framework: 'react',
-  compiler: 'webpack5',
-  cache: {
-    enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+  compiler: {
+    type: 'webpack5',
+    prebundle: { enable: false }
   },
+  // cache: {
+  //   enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+  // },
   mini: {
     postcss: {
       pxtransform: {
         enable: true,
         config: {
-
+          selectorBlackList: ['nut-']
         }
       },
       url: {
@@ -49,7 +53,14 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    // esnextModules: ['nutui-react'],
     postcss: {
+      pxtransform: {
+        enable: true,
+        config: {
+          selectorBlackList: ['nut-']
+        }
+      },
       autoprefixer: {
         enable: true,
         config: {

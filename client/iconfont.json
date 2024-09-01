@@ -1,0 +1,10 @@
+{
+  "symbol_url": "//at.alicdn.com/t/c/font_4670373_782xgc32i4h.js",
+  "save_dir": "./src/components/iconfont",
+  "use_typescript": true,
+  "platforms": ["weapp"],
+  "use_rpx": true,
+  "trim_icon_prefix": "ms-icon-",
+  "default_icon_size": 18,
+  "design_width": 375
+}

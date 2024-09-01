@@ -1,24 +1,29 @@
-import { Component, PropsWithChildren } from 'react'
-import Taro, { Config } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
-import './index.less'
+import { Component, PropsWithChildren } from "react";
+import { View  } from "@tarojs/components";
+import "./index.less";
 
-import Login from '../../components/login/index'
+import Login from "../../components/login/index";
+import { Button } from "@nutui/nutui-react-taro";
+import IconFont from "../../components/iconfont";
 
 export default class Index extends Component<PropsWithChildren> {
-  componentDidMount () { }
+  componentDidMount() {}
 
-  componentWillUnmount () { }
+  componentWillUnmount() {}
 
-  componentDidShow () { }
+  componentDidShow() {}
 
-  componentDidHide () { }
+  componentDidHide() {}
 
-  render () {
+  render() {
     return (
-      <View className='index'>
-        <Login/>
+      <View className="index">
+          <IconFont name="close4" color="#000" />
+        <View>
+          <Button type="primary">NutUI React Button</Button>
+        </View>
+        <Login />
       </View>
-    )
+    );
   }
 }

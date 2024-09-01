@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "client/dist/",
   "cloudfunctionRoot": "cloud/functions/",
-  "projectname": "taro-cloud-template",
+  "projectname": "taro-nutui-wxcloud-template",
   "description": "",
   "appid": "wxe57538a64204c682",
   "setting": {

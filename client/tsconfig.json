@@ -16,7 +16,6 @@
     "baseUrl": ".",
     "rootDir": ".",
     "jsx": "react-jsx",
-    "jsxFactory": "Taro.createElement",
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": [
